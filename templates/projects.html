@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Registration form</title>
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="title">
+            Project Registration Form
+        </div>
+        <form action="{% url 'home' %}" target="" method="post" class="form">
+            {% csrf_token %}
+            <div class="inputfield">
+                <label>Full Name</label>
+                <input type="text" class="input" name="Full_Name">
+            </div>
+            <div class="inputfield">
+                <label>System ID</label>
+                <input type="number" class="input" name="System_id">
+            </div>
+            <div class="inputfield">
+                <label>Roll No</label>
+                <input type="number" class="input" name="Roll_No">
+            </div>
+            <div class="inputfield">
+                <label>Email</label>
+                <input type="email" class="input" name = "Email">
+            </div>
+
+            <div class="inputfield">
+                <label>Project Title</label>
+                <input type="text" class="input" name = "Project_Title">
+            </div>
+            <div class="inputfield">
+                <label>Guide Name</label>
+                <input type="text" class="input" name = "Guide_Name">
+            </div>
+            <div class="inputfield">
+                <label>Team Size</label>
+                <input type="number" class="input" name = "Team_Size">
+            </div>
+            <div class="inputfield">
+                <label>Project Category</label>
+                <input type="text" class="input" name = "Project_Category">
+            </div>
+            <div class="inputfield">
+                <label>Section 6th Sem</label>
+                <input type="text" class="input" name = "Section">
+            </div>
+            <div class="inputfield">
+                <label>Project Passcode</label>
+                <input type="text" class="input" name="Project_Passcode">
+            </div>
+            <div class="inputfield">
+                <label>Phone Number</label>
+                <input type="text" class="input" name = "Phone_Number">
+            </div>
+            <div class="inputfield">
+                <label>Synopsis Submitted</label>
+                <div class="custom_select">
+                    <select name = "Submitted_Synopsis">
+                        <option value="">Select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+            </div>
+            "//<div class="inputfield">
+                <label for="">Screenshot of approval</label>
+                <input type="file" id="real-file" hidden="hidden" class="input" name = "Screenshot_Of_Approval"/>
+                <button type="button" id="custom-button" class="in">Choose a file</button>
+                <span id="custom-text">No file chosen</span>
+            </div>"
+            <div class="inputfield">
+                <input type="submit" value="Submit" class="btn">
+            </div>
+            {% if messeges %}
+            {% for  message in messages  %}
+                {{message}}
+            {% endfor %}
+            {% endif %}
+        </form>
+    </div>
+    <script src="{% static 'script.js'%}"></script>
+</body>
+</html>

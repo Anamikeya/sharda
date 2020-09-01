@@ -1,0 +1,147 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Registration form</title>
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="title">
+            Project Registration Form
+        </div>
+        <form action="{% url 'home' %}" target="" method="post" class="form">
+            {% csrf_token %}
+            <div class="inputfield">
+                <label>Full Name</label>
+                <input type="text" class="input" name="Full_Name">
+            </div>
+            <div class="inputfield">
+                <label>System ID</label>
+                <input type="number" class="input" name="System_id">
+            </div>
+            <div class="inputfield">
+                <label>Roll No</label>
+                <input type="number" class="input" name="Roll_No">
+            </div>
+            <div class="inputfield">
+                <label>Email</label>
+                <input type="email" class="input" name = "Email">
+            </div>
+
+            <div class="inputfield">
+                <label>Project Title</label>
+                <input type="text" class="input" name = "Project_Title">
+            </div>
+            <div class="inputfield">
+                <label>Guide Name</label>
+                <div class="custom_select">
+                    <select name = "Guide_Name">
+                        <option value="">Select</option>
+                        <option value="Prof. (Dr.) Parma Nand">Prof. (Dr.) Parma Nand</option>
+                        <option value="Prof. (Dr.) Nitin Rakesh">Prof. (Dr.) Nitin Rakesh</option>
+                        <option value="Prof. (Dr.) Shri Kant">Prof. (Dr.) Shri Kant</option>
+                        <option value="Prof. (Dr.) Anil Kumar Sagar ">Prof. (Dr.) Anil Kumar Sagar </option>
+                        <option value="Prof. (Dr.) Arun Prakash Agarwal">Prof. (Dr.) Arun Prakash Agarwal</option>
+                        <option value="Prof. (Dr.) Ankur Choudhary">Prof. (Dr.) Ankur Choudhary</option>
+                        <option value="Prof. (Dr.) Rukaiya Khanam">Prof. (Dr.) Rukaiya Khanam</option>
+                        <option value="Dr. Mandeep Kaur">Dr. Mandeep Kaur</option>
+                        <option value="Dr. Gaurav Raj">Dr. Gaurav Raj</option>
+                        <option value="Dr. Mohit Agarwal">Dr. Mohit Agarwal</option>
+                        <option value="Dr. Sudeshna Chakraborty">Dr. Sudeshna Chakraborty</option>
+                        <option value="Dr. Ali Imam Abidi">Dr. Ali Imam Abidi</option>
+                        <option value="Dr. Vijendra Singh">Dr. Vijendra Singh</option>
+                        <option value="Dr. Amrita">Dr. Amrita</option>
+                        <option value="Dr. Mayank Kumar Goyal">Dr. Mayank Kumar Goyal</option>
+                        <option value="Dr. Latha Banda">Dr. Latha Banda</option>
+                        <option value="Dr. Hoor Fatima">Dr. Hoor Fatima</option>
+                        <option value="Dr. Nitish Kumar">Dr. Nitish Kumar</option>
+                        <option value="Mr. Sudeep Varshney">Mr. Sudeep Varshney</option>
+                        <option value="Mr. Pradeep Kumar Mishra">Mr. Pradeep Kumar Mishra</option>
+                        <option value="Mr. Gouri Shankar Mishra">Mr. Gouri Shankar Mishra</option>
+                        <option value="Mr. Amit Upadhyay">Mr. Amit Upadhyay</option>
+                        <option value="Ms. Preeti Kaushik">Ms. Preeti Kaushik</option>
+                        <option value="Ms. Shaveta Khepra">Ms. Shaveta Khepra</option>
+                        <option value="Ms. Jyotsna Seth">Ms. Jyotsna Seth</option>
+                        <option value="Ms. Anamika Mitra">Ms. Anamika Mitra</option>
+                        <option value="Mr. Devendra Gautam">Mr. Devendra Gautam</option>
+                        <option value="Ms. Rani Astya">Ms. Rani Astya</option>
+                        <option value="Mr. Manish Verma">Mr. Manish Verma</option>
+                        <option value="Mr. Dharm Raj">Mr. Dharm Raj</option>
+                        <option value="Mr. Pankaj Sharma">Mr. Pankaj Sharma</option>
+                        <option value="Mr. Tarun Maini">Mr. Tarun Maini</option>
+                        <option value="Ms. Preeti Dubey">Ms. Preeti Dubey</option>
+                        <option value="Mr. Sunil Kumar">Mr. Sunil Kumar</option>
+                        <option value="Ms. Kanika Singla">Ms. Kanika Singla</option>
+                        <option value="Ms. Megha Chhabra">Ms. Megha Chhabra</option>
+                        <option value="Ms. Abha Kiran Rajpoot">Ms. Abha Kiran Rajpoot</option>
+                        <option value="Ms. Deepti Sahu">Ms. Deepti Sahu</option>
+                        <option value="Mr. Subrata Sahana">Mr. Subrata Sahana</option>
+                        <option value="Ms. Pragya Mishra">Ms. Pragya Mishra</option>
+                        <option value="Mr. Abhishek Singh Verma">Mr. Abhishek Singh Verma</option>
+                        <option value="Ms. Ritu Dewan">Ms. Ritu Dewan</option>
+                        <option value="Ms. Neha Tyagi">Ms. Neha Tyagi</option>
+                        <option value="Mr. Sushant Jhingran">Mr. Sushant Jhingran</option>
+                        <option value="Ms. Gunjan Agarwal">Ms. Gunjan Agarwal</option>
+                        <option value="Mr. Satendra Kumar">Mr. Satendra Kumar</option>
+                        <option value="Mr. Jagdeep Singh">Mr. Jagdeep Singh</option>
+                        <option value="Mr. Tejaswi Khanna">Mr. Tejaswi Khanna</option>
+                        <option value="Mr. Bharat Bhushan">Mr. Bharat Bhushan</option>
+                        <option value="	Mr. Avinash Kumar">	Mr. Avinash Kumar</option>
+                        
+                    </select>
+                </div>
+            </div>
+            <div class="inputfield">
+                <label>Team Size</label>
+                <input type="number" class="input" name = "Team_Size">
+            </div>
+            <div class="inputfield">
+                <label>Project Category</label>
+                <input type="text" class="input" name = "Project_Category">
+            </div>
+            <div class="inputfield">
+                <label>Section 6th Sem</label>
+                <input type="text" class="input" name = "Section">
+            </div>
+            <div class="inputfield">
+                <label>Project Passcode</label>
+                <input type="text" class="input" name="Project_Passcode">
+            </div>
+            <div class="inputfield">
+                <label>Phone Number</label>
+                <input type="number" class="input" name = "Phone_Number">
+            </div>
+            <div class="inputfield">
+                <label>Synopsis Submitted</label>
+                <div class="custom_select">
+                    <select name = "Submitted_Sypnosis">
+                        <option value="">Select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+            </div>
+            <div class="inputfield">
+                <label for="">Screenshot of approval</label>
+                <input type="file" id="real-file" hidden="hidden" class="input" name = "Screenshot_Of_Approval"/>
+                <button type="button" id="custom-button" class="in">Choose a file</button>
+                <span id="custom-text">No file chosen</span>
+            </div>
+            <div class="inputfield">
+                <input type="submit" value="Submit" class="btn">
+            </div>
+            
+            {% for  message in messages  %}
+                <h3>{{message}}</h3>
+            {% endfor %}
+            
+        </form>
+    </div>
+    <script src="{% static 'script.js'%}"></script>
+</body>
+</html>

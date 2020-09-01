@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{%static 'style.css'%}" >
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Source+Sans+Pro&display=swap"
+    rel="stylesheet" />
+  <title>Project Registration</title>
+</head>
+
+<body>
+  <h2 class="title">Project Registration Form</h2>
+  <form action="home" method="post" name="registration">
+    <h3>General Information</h3>
+    {% csrf_token %}
+    <div id="container">
+      <div class="row-input"> <label for="Full_Name">Full Name</label>
+        <input type="text" name="Full_Name" id="Full_Name" placeholder="Full_Name" /></div>
+      <div class="row-input"><label for="systemId">System ID</label>
+        <input type="number" name="systemId" id="systemId" placeholder="System ID" /></div>
+      <div class="row-input"><label for="rollNo">Roll No</label>
+        <input type="number" name="rollNo" id="rollNo" placeholder="Roll No" /></div>
+      <div class="row-input"><label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Email" /></div>
+      <div class="row-input"><label for="projectTitle">Project Title</label>
+        <input type="text" name="projectTitle" id="projectTitle" placeholder="Project Title" /></div>
+      <div class="row-input"><label for="guideName">Guide Name</label>
+        <input type="text" name="guideName" id="guideName" placeholder="Guide Name" /></div>
+      <div class="row-input"><label for="teamSize">Team Size</label>
+        <input type="number" name="teamSize" id="teamSize" placeholder="Team Size" /></div>
+      <div class="row-input"><label for="projectCategory">Project Category</label>
+        <input type="text" name="projectCategory" id="projectCategory" placeholder="Project Category" /></div>
+      <div class="row-input"><label for="classSection">Section</label>
+        <input type="text" name="classSection" id="classSection" placeholder="Section of 6th Sem" /></div>
+      <div class="row-input"><label for="passcode">Project Passcode</label>
+        <input type="text" name="passcode" id="passcode" placeholder="Project Passcode" /></div>
+      <div class="row-input"><label for="phone">Phone Number</label>
+        <input type="number" name="phone" id="phone" placeholder="Phone Number" /></div>
+      <div class="row-input"><label for="synopsis">Submitted Synopsis</label>
+        <select name="synopsis" id="synopsis">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select></div> <br />
+      <div class="row-input"><label for="fileUpload">Screenshot of Approval</label><br>
+        <input type="file" name="fileUpload" id="fileUpload" /></div>
+      <input type="submit" value="Submit" id="submit" />
+
+    </div>
+  </form>
+  <script src={% static 'script.js'}> </script>
+</body>
+
+</html>

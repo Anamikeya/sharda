@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>
+database
+</title>
+</head>
+<body>
+<form action = "{% url 'home' %}" method ="post">
+{% csrf_token %}
+Full_Name : <input type="text" name="Full_Name" placeholder=""><br>
+System_id : <input type="number" name="System_id" placeholder=""><br>
+Roll_No :  <input type="number" name="Roll_No" placeholder=""><br>
+Email : <input type="email" name="Email" placeholder=""><br>
+Project_Title : <input type="text" name="Project_Title" placeholder=""><br>
+Guide_Name : <input type="text" name="Guide_Name" placeholder=""><br>
+Team_Size : <input type="number" name="Team_Size" placeholder=""><br>
+Project_Category : <input type="text" name="Project_Category" placeholder=""><br>
+Section : <input type="text" name="Section" placeholder=""><br>
+Project_Passcode : <input type="text" name="Project_Passcode" placeholder=""><br>
+Phone_Number : <input type="number" name="Phone_Number" placeholder=""><br>
+Submitted_Sypnosis : <input type="text" name="Submitted_Sypnosis" placeholder=""><br>
+ScreenShot_Of_Approval : <input type="file"  name = "Screenshot_Of_Approval"/><br>
+                        
+                 
+<input type = "submit">
+</form>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+<head>
+<title>
+upload ss
+</title>
+</head>
+<body>
+<form action ="index/upload" method = "post">
+{% csrf_token %}
+<h1> Upload your ss here</h1>
+<input type = "file" name = 'image'>
+<input type = "submit" value = "Upload_file">
+</form>
+</body>
+</html>
