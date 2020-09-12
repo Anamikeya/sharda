@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
 
+    'registration.apps.RegistrationConfig',
     'evalution.apps.EvalutionConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -39,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'uploadapp1.apps.Uploadapp1Config',
+    
 ]
 
 MIDDLEWARE = [
